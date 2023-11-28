@@ -522,8 +522,57 @@ a:hover {
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 13.51px;
-}
+    border-radius: 13.51px;  
+}.card {
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 200px;
+    background: #fff;
+    display: flex; margin-left: 60px;
+    margin-top: 30px;  float: left ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem .5rem;
+    box-shadow: 0 1px 1px rgb(0,0,0,0.1),
+      0 2px 2px rgb(0,0,0,0.1),
+      0 4px 4px rgb(0,0,0,0.1),
+      0 8px 8px rgb(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background:#00BAD5;
+    clip-path: 
+      polygon(0 0, 100% 0, 100% 100%);
+    transition: 
+      width 0.3s ease, height 0.3s ease;
+    z-index: 0;
+  }
+  .card:hover:before {
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+  }
+  .card:hover h2 {
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .card:hover p {
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+  }
+  
 .projects{
     width: 100%; 
     color: #1E1E1E;
@@ -548,7 +597,7 @@ a:hover {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
-    display: inline-flex;
+    display: inline-flex; 
 }
 
 .pimage-container {
@@ -558,7 +607,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    margin-left: 60px;
+    margin-left: 60px; 
      
 }
 
